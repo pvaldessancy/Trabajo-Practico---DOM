@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetir Palabra</title>
+    <style>
+        /* Estilos básicos para que se vea bien */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            /* Para que el padding no afecte el ancho */
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background-color: #fafafa;
+            min-height: 50px;
+            color: #333;
+            word-wrap: break-word;
+            /* Para que las palabras largas bajen de línea */
+            white-space: pre-wrap;
+            /* Mantiene los espacios y saltos de línea */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Repetidor de Palabras</h1>
+
+        <div class="input-group">
+            <label for="inputPalabra">Ingresa una palabra:</label>
+            <input type="text" id="inputPalabra" placeholder="Ej: Hola">
+        </div>
+
+        <div class="input-group">
+            <label for="inputCantidad">¿Cuántas veces repetir?</label>
+            <input type="number" id="inputCantidad" placeholder="Ej: 5" min="1">
+        </div>
+
+        <button id="btnRepetir">Repetir</button>
+
+        <div id="resultado">Aquí verás el resultado...</div>
+    </div>
+
+    <!-- Vinculamos el archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
